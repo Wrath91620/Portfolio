@@ -101,7 +101,7 @@ export function ProjectCaseStudy({ project, index }) {
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">{project.problem}</p>
             </div>
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">What we did</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">What I Did</h4>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">{project.solution}</p>
             </div>
           </div>
