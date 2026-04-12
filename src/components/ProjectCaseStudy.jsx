@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useId, useState } from "react";
 import { projectLogoStyles } from "@/lib/projectLogo";
+import { IconChevronDown, IconChevronRight } from "./icons";
 
 /** Expandable case study. Copy in src/data/projects.js */
 export function ProjectCaseStudy({ project, index }) {
@@ -58,9 +59,10 @@ export function ProjectCaseStudy({ project, index }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
               >
-                Live
+                Visit site
+                <IconChevronRight className="opacity-80" />
               </a>
             ) : null}
             {project.repoUrl ? (
@@ -68,9 +70,10 @@ export function ProjectCaseStudy({ project, index }) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-[var(--color-text-muted)] underline-offset-4 hover:text-[var(--color-text)] hover:underline"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-text-muted)] underline-offset-4 hover:text-[var(--color-text)] hover:underline"
               >
-                Code
+                View code
+                <IconChevronRight className="opacity-80" />
               </a>
             ) : null}
           </div>
@@ -85,31 +88,25 @@ export function ProjectCaseStudy({ project, index }) {
           onClick={() => setOpen((v) => !v)}
           className="flex w-full items-center justify-between gap-4 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-left text-sm font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
         >
-          <span>{open ? "Hide case breakdown" : "Case breakdown: problem, solution, impact"}</span>
-          <svg
-            className={`h-5 w-5 shrink-0 text-[var(--color-text-muted)] transition-transform ${open ? "rotate-180" : ""}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-          </svg>
+          <span>{open ? "Hide the story" : "How I approached it"}</span>
+          <IconChevronDown
+            className={`text-[var(--color-text-muted)] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          />
         </button>
 
         <div id={panelId} hidden={!open} className={open ? "mt-6 block" : "hidden"}>
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">Problem</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">What was wrong</h4>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">{project.problem}</p>
             </div>
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">Solution</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">What we did</h4>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">{project.solution}</p>
             </div>
           </div>
           <div className="mt-8 border-t border-[var(--color-border)] pt-8">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">Outcome</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">What changed</h4>
             <p className="mt-2 text-sm font-medium leading-relaxed text-[var(--color-text)]">{project.outcome}</p>
           </div>
         </div>

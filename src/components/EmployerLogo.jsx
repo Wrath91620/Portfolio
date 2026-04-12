@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { projectLogoStyles } from "@/lib/projectLogo";
+import { IconChevronRight } from "./icons";
 
 /** Employer logo chip + site link, aligned with ProjectCaseStudy logos */
 export function EmployerLogo({ company, websiteUrl, localLogoUrl, logoUrl, logoTreatment }) {
@@ -36,9 +37,10 @@ export function EmployerLogo({ company, websiteUrl, localLogoUrl, logoUrl, logoT
         href={websiteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
+        className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
       >
-        Site
+        Visit site
+        <IconChevronRight className="opacity-80" />
       </a>
     </div>
   );

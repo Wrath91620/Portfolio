@@ -8,10 +8,10 @@ export function Impact() {
     <SectionShell id="impact" variant="muted">
       <SectionHeading
         eyebrow="Impact"
-        title="Outcomes you can trace, not adjectives."
-        description="I optimize for business-visible results: traffic, rankings, stable systems, and handoffs that do not require babysitting."
+        title="Numbers I can point to."
+        description="I care about outcomes you can show in a deck or a dashboard: traffic, rankings, stable systems, and handoffs that do not need me in every standup."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-5">
         {impactStats.map((stat, i) => (
           <Reveal
             key={stat.label}

@@ -10,7 +10,7 @@ export function Experience() {
       <SectionHeading
         eyebrow="Experience"
         title="Professional experience."
-        description="Roles grouped by employer: current leadership at TGMENA, then progression at SarrdehTech from WordPress and Flutter into team lead and full stack delivery."
+        description="Grouped by company so you can see the arc: today at TGMENA, then several years at SarrdehTech from WordPress and Flutter into team lead and full stack work."
       />
 
       <div className="flex flex-col gap-8 lg:gap-10">
@@ -30,10 +30,12 @@ export function Experience() {
                       {employer.company}
                     </h3>
                     {employer.location ? (
-                      <p className="mt-1 text-sm text-[var(--color-text-muted)]">{employer.location}</p>
+                      <p className="mt-2 text-sm font-normal leading-relaxed text-[var(--color-text-muted)]">
+                        {employer.location}
+                      </p>
                     ) : null}
                     {employer.roles.length > 1 ? (
-                      <p className="mt-3 text-xs font-medium uppercase tracking-wider text-[var(--color-accent)] sm:mt-2">
+                      <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                         {employer.roles.length} roles
                       </p>
                     ) : null}
@@ -56,20 +58,20 @@ export function Experience() {
                     key={`${employer.company}-${role.period}-${role.title}`}
                     className={ri > 0 ? "border-t border-[var(--color-border)] pt-10" : ""}
                   >
-                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                      <h4 className="text-base font-semibold leading-snug text-[var(--color-text)] sm:max-w-xl">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
+                      <h4 className="max-w-xl font-display text-lg font-medium leading-snug tracking-tight text-[var(--color-text)]">
                         {role.title}
                       </h4>
-                      <p className="shrink-0 font-mono text-xs text-[var(--color-text-muted)] sm:text-right sm:text-sm">
+                      <p className="shrink-0 text-sm font-normal tabular-nums leading-snug text-[var(--color-text-muted)] sm:text-right">
                         {role.period}
                       </p>
                     </div>
                     <ul
-                      className="mt-4 space-y-3 text-sm leading-relaxed text-[var(--color-text-muted)]"
+                      className="mt-4 space-y-3 text-sm font-normal leading-relaxed text-[var(--color-text-muted)]"
                       aria-label={`${role.title} responsibilities`}
                     >
                       {role.highlights.map((h) => (
-                        <li key={h} className="flex gap-3">
+                        <li key={h} className="flex gap-2.5">
                           <span
                             className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--color-accent)]"
                             aria-hidden

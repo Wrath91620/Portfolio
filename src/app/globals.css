@@ -39,8 +39,9 @@ html {
 }
 
 body {
-  @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased;
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased leading-relaxed;
   font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {

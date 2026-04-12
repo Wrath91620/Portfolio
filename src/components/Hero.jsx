@@ -14,44 +14,44 @@ export function Hero() {
         <Reveal>
           <p className="mb-4 inline-flex max-w-xl flex-wrap items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs font-medium text-[var(--color-text-muted)]">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" aria-hidden />
-            <span>Tech lead · SaaS &amp; data workflows · AI-assisted delivery</span>
+            <span>Tech lead · SaaS and data · Shipping with care</span>
           </p>
         </Reveal>
 
         <Reveal className="delay-75">
           <h1 className="max-w-4xl font-display text-4xl font-medium leading-[1.06] tracking-tight text-[var(--color-text)] sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05]">
-            I build and lead scalable web systems that drive{" "}
-            <span className="text-[var(--color-text-muted)]">real business outcomes.</span>
+            I build and lead web systems that{" "}
+            <span className="text-[var(--color-text-muted)]">earn their place in production.</span>
           </h1>
         </Reveal>
 
         <Reveal className="delay-100">
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-text-muted)] sm:text-xl">
-            Full stack engineer and development team lead, 3+ years shipping production web and mobile end to end.
-            I own architecture, engineering standards, and delivery pace while staying hands-on where risk is highest:
-            SaaS surfaces, APIs, data models, integrations, and technical SEO that shows up in rankings.
+            Full stack engineer and team lead, with several years shipping web and mobile work end to end. I stay close to
+            architecture and standards, and I still write code when the risk is high or the timeline is tight: SaaS
+            surfaces, APIs, data, integrations, and technical SEO that you can see in search.
           </p>
         </Reveal>
 
         <Reveal className="delay-150">
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-6 py-3.5 text-center text-base font-semibold text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)]"
             >
-              Work with me
+              Get in touch
             </Link>
             <Link
               href="/work"
               className="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-3.5 text-center text-base font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
             >
-              View projects
+              See selected work
             </Link>
             {site.cvPath ? (
               <Link
                 href={site.cvPath}
                 download
-                className="inline-flex items-center justify-center text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline sm:ml-2"
+                className="inline-flex items-center justify-center text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline sm:ml-1"
               >
                 Download CV
               </Link>
@@ -61,9 +61,8 @@ export function Hero() {
 
         <Reveal className="delay-200">
           <p className="mt-8 max-w-2xl text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Credibility: +60% website traffic and page one (#2) ranking for primary keywords after disciplined technical SEO
-            and performance work; multiple production systems delivered with documentation that did not require follow-up
-            hand-holding.
+            One recent win: +60% site traffic and a #2 rank for primary keywords after SEO and performance work, plus
+            several production launches documented so teams were not stuck waiting on me for basics.
           </p>
         </Reveal>
 

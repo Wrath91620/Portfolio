@@ -1,6 +1,6 @@
 export function SectionHeading({ eyebrow, title, description }) {
   return (
-    <header className="mb-12 max-w-2xl lg:mb-16">
+    <header className="mb-12 max-w-3xl lg:mb-16">
       <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
         {eyebrow}
       </p>

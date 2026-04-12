@@ -40,8 +40,8 @@ export function Contact() {
         <div>
           <SectionHeading
             eyebrow="Contact"
-            title="Let’s build something serious."
-            description="If you’re hiring a tech lead or need a senior full stack partner for SaaS, integrations, or performance critical web work, send a concise brief. I respond to real opportunities, not vague intros."
+            title="Say hello."
+            description="If you are hiring a tech lead or need a senior partner for SaaS, integrations, or performance sensitive work, send a short note with context. I reply to messages that sound like a real conversation."
           />
           <Reveal>
             <div className="mt-8 space-y-5 text-sm text-[var(--color-text-muted)]">

@@ -21,6 +21,6 @@ export const impactStats = [
   {
     value: "Zero",
     label: "Documentation gaps",
-    detail: "Handoffs built to stand alone: runbooks, APIs, and decisions your next hire can trust.",
+    detail: "Handoffs meant to stand alone: runbooks, APIs, and decisions your next hire can rely on.",
   },
 ];

@@ -74,7 +74,7 @@ export function Navbar() {
             href="/contact"
             className="hidden rounded-[var(--radius-md)] bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:inline-flex"
           >
-            Work with me
+            Get in touch
           </Link>
           <button
             type="button"
@@ -114,7 +114,7 @@ export function Navbar() {
               href="/contact"
               className="mt-2 rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-3 text-center text-base font-semibold text-[var(--color-bg)]"
             >
-              Work with me
+              Get in touch
             </Link>
           </nav>
         </div>
