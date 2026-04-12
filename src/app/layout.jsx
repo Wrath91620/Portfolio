@@ -62,7 +62,6 @@ export default function RootLayout({ children }) {
         jobTitle: site.title,
         description: site.description,
         url: site.url,
-        email: site.email,
         sameAs: [site.linkedin, site.github, site.twitter].filter(Boolean),
         knowsAbout: site.keywords,
       },

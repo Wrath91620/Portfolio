@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footerNav } from "@/data/nav";
 import { site } from "@/data/site";
+import { IconLinkedIn } from "./icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -36,17 +37,12 @@ export function Footer() {
                 href={site.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                aria-label="LinkedIn"
+                className="inline-flex text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
               >
-                LinkedIn
+                <IconLinkedIn className="h-4 w-4" />
               </a>
             ) : null}
-            <a
-              href={`mailto:${site.email}`}
-              className="text-xs font-medium text-[var(--color-accent)] hover:underline"
-            >
-              {site.email}
-            </a>
           </nav>
         </div>
         <p className="mt-8 border-t border-[var(--color-border)] pt-6 text-xs text-[var(--color-text-muted)]">

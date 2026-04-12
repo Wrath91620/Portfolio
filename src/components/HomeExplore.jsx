@@ -11,7 +11,6 @@ const blurbs = {
   "/skills": "Tools and practices I rely on in production, not a laundry list.",
   "/experience": "Teams I have been part of and what I owned.",
   "/services": "Ways I can plug in, from builds to integrations to SEO.",
-  "/contact": "Tell me what you are trying to do. I read every thoughtful note.",
 };
 
 export function HomeExplore() {

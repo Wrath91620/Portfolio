@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { mainNav } from "@/data/nav";
 import { site } from "@/data/site";
+import { IconLinkedIn } from "./icons";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
@@ -70,12 +71,17 @@ export function Navbar() {
               CV
             </a>
           ) : null}
-          <Link
-            href="/contact"
-            className="hidden rounded-[var(--radius-md)] bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:inline-flex"
-          >
-            Get in touch
-          </Link>
+          {site.linkedin ? (
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hidden items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-2 text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:inline-flex"
+            >
+              <IconLinkedIn className="h-[1.125rem] w-[1.125rem]" />
+            </a>
+          ) : null}
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] md:hidden"
@@ -110,12 +116,17 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="mt-2 rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-3 text-center text-base font-semibold text-[var(--color-bg)]"
-            >
-              Get in touch
-            </Link>
+            {site.linkedin ? (
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="mt-2 inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-3 text-[var(--color-bg)]"
+              >
+                <IconLinkedIn className="h-6 w-6" />
+              </a>
+            ) : null}
           </nav>
         </div>
       ) : null}

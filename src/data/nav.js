@@ -9,7 +9,6 @@ export const mainNav = [
   { href: "/skills", label: "Skills" },
   { href: "/experience", label: "Experience" },
   { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export const footerNav = [
@@ -17,5 +16,4 @@ export const footerNav = [
   { href: "/impact", label: "Impact" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
 ];

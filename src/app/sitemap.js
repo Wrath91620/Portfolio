@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 /** Multi-page sitemap. Update `site.url` when you deploy. */
 export default function sitemap() {
   const base = site.url.replace(/\/$/, "");
-  const paths = ["", "/about", "/impact", "/skills", "/work", "/experience", "/services", "/contact"];
+  const paths = ["", "/about", "/impact", "/skills", "/work", "/experience", "/services"];
   const now = new Date();
   return paths.map((path) => ({
     url: `${base}${path || "/"}`,

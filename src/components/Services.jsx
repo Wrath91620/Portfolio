@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { services } from "@/data/services";
+import { site } from "@/data/site";
 import { SectionHeading } from "./SectionHeading";
 import { SectionShell } from "./SectionShell";
 import { Reveal } from "./Reveal";
-import { IconChevronRight } from "./icons";
+import { IconChevronRight, IconLinkedIn } from "./icons";
 
 export function Services() {
   return (
@@ -19,13 +19,19 @@ export function Services() {
             <article className="group flex h-full min-h-full flex-col rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition-colors hover:border-[var(--color-accent)]/45 sm:p-7">
               <h3 className="font-display text-lg font-medium text-[var(--color-text)]">{s.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-text-muted)]">{s.description}</p>
-              <Link
-                href="/contact"
-                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
-              >
-                Talk about this
-                <IconChevronRight className="transition-transform duration-200 group-hover:translate-x-0.5" />
-              </Link>
+              {site.linkedin ? (
+                <a
+                  href={site.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Talk on LinkedIn"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
+                >
+                  <span>Talk on</span>
+                  <IconLinkedIn className="h-4 w-4" />
+                  <IconChevronRight className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                </a>
+              ) : null}
             </article>
           </Reveal>
         ))}

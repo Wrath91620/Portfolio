@@ -1,5 +1,5 @@
 /**
- * CUSTOMIZE: Name, role, contact, URLs, metrics. Single source of truth.
+ * CUSTOMIZE: Name, role, URLs, metrics. Single source of truth.
  */
 
 export const site = {
@@ -7,7 +7,6 @@ export const site = {
   title: "Development Team Lead & Full Stack Engineer",
   tagline:
     "SaaS systems, data workflows, and production web and mobile owned end to end from architecture to delivery.",
-  email: "karim@yourdomain.com",
   phone: "",
   url: "https://yourdomain.com",
   /** Primary meta description (~155 characters) for search and sharing */

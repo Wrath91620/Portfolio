@@ -1,5 +1,5 @@
 /**
- * CUSTOMIZE: Quantified outcomes for the Impact section.
+ * Impact page: headline stats, focus areas, and narrative. Tune numbers to match your real outcomes.
  */
 
 export const impactStats = [
@@ -23,4 +23,31 @@ export const impactStats = [
     label: "Documentation gaps",
     detail: "Handoffs meant to stand alone: runbooks, APIs, and decisions your next hire can rely on.",
   },
+];
+
+/** Deeper view: where measurable impact tends to show up */
+export const impactFocusAreas = [
+  {
+    title: "Search and content",
+    description:
+      "Structured data, hreflang, clean IA, and pages that answer intent. I optimize for what people actually search for, not just what looks good in a sitemap export.",
+  },
+  {
+    title: "Performance and UX",
+    description:
+      "Core Web Vitals, image and asset discipline, and honest performance budgets. Fast sites rank better and convert better, so I treat speed as a product requirement, not a nice to have.",
+  },
+  {
+    title: "Delivery and handoffs",
+    description:
+      "Readable PRs, API contracts, and deployment notes. The goal is that the next engineer or stakeholder can onboard without a week of archaeology.",
+  },
+];
+
+/** Short signals I track on serious builds */
+export const impactSignals = [
+  "Organic traffic and keyword visibility (Search Console, rank trackers where relevant)",
+  "Core Web Vitals and real user metrics, not just Lighthouse in a cold tab",
+  "Error rates, uptime, and incident response when something goes wrong in production",
+  "Time to first meaningful review for a new teammate on the codebase",
 ];

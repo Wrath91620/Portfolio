@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { IconLinkedIn } from "./icons";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
@@ -35,12 +36,17 @@ export function Hero() {
 
         <Reveal className="delay-150">
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-6 py-3.5 text-center text-base font-semibold text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)]"
-            >
-              Get in touch
-            </Link>
+            {site.linkedin ? (
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-6 py-3.5 text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)]"
+              >
+                <IconLinkedIn className="h-6 w-6" />
+              </a>
+            ) : null}
             <Link
               href="/work"
               className="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-3.5 text-center text-base font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"

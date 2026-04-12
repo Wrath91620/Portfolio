@@ -29,7 +29,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Impact />
+      <Impact compact />
       <HomeExplore />
     </>
   );
