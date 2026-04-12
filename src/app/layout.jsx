@@ -20,6 +20,12 @@ const fraunces = Fraunces({
 
 const rootTitle = `${site.name} | ${site.title}`;
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata = {
   title: {
     default: rootTitle,

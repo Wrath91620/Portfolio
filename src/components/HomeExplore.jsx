@@ -16,7 +16,7 @@ const blurbs = {
 export function HomeExplore() {
   return (
     <section className="border-b border-[var(--color-border)] bg-[var(--color-bg)]">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="container-px mx-auto max-w-6xl py-20 sm:py-24">
         <SectionHeading
           eyebrow="Explore"
           title="The rest of the site, page by page."

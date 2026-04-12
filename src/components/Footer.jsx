@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-bg)]">
-      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6 lg:px-8">
+      <div className="container-px mx-auto max-w-6xl pt-10 pb-[max(2.5rem,env(safe-area-inset-bottom,0px))]">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
           <div>
             <Link href="/" className="font-display text-lg font-medium text-[var(--color-text)]">
@@ -38,9 +38,9 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="inline-flex text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                className="-m-2 inline-flex min-h-11 min-w-11 items-center justify-center rounded-[var(--radius-md)] text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text)]"
               >
-                <IconLinkedIn className="h-4 w-4" />
+                <IconLinkedIn className="h-5 w-5" />
               </a>
             ) : null}
           </nav>

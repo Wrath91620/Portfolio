@@ -7,9 +7,9 @@ export function SectionShell({ id, children, className = "", variant = "default"
   return (
     <section
       id={id}
-      className={`scroll-mt-24 border-b border-[var(--color-border)] ${bg} ${className}`}
+      className={`scroll-mt-[calc(6rem+env(safe-area-inset-top,0px))] border-b border-[var(--color-border)] ${bg} ${className}`}
     >
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-24 lg:px-8">{children}</div>
+      <div className="container-px mx-auto max-w-6xl py-20 sm:py-24">{children}</div>
     </section>
   );
 }

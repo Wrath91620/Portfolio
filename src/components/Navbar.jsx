@@ -24,18 +24,27 @@ export function Navbar() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors ${
+      className={`fixed inset-x-0 top-0 z-50 border-b pt-[env(safe-area-inset-top,0px)] transition-colors ${
         scrolled
           ? "border-[var(--color-border)] bg-[var(--color-bg)]/85 backdrop-blur-md dark:bg-[var(--color-bg)]/80"
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-6 lg:px-8">
+      <div className="container-px mx-auto flex h-16 max-w-6xl min-h-16 items-center justify-between gap-3">
         <Link
           href="/"
-          className="shrink-0 font-display text-base font-medium tracking-tight text-[var(--color-text)] sm:text-lg"
+          className="min-w-0 flex-1 truncate font-display text-base font-medium tracking-tight text-[var(--color-text)] sm:flex-none sm:text-lg"
         >
           {site.name}
         </Link>
@@ -60,13 +69,13 @@ export function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <ThemeToggle />
           {site.cvPath ? (
             <a
               href={site.cvPath}
               download
-              className="hidden rounded-[var(--radius-md)] border border-[var(--color-border)] px-3 py-2 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] sm:inline-flex"
+              className="hidden min-h-11 items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] px-3 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] sm:inline-flex"
             >
               CV
             </a>
@@ -77,14 +86,14 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hidden items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-2 text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:inline-flex"
+              className="hidden min-h-11 min-w-11 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:inline-flex"
             >
               <IconLinkedIn className="h-[1.125rem] w-[1.125rem]" />
             </a>
           ) : null}
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((o) => !o)}
@@ -104,14 +113,14 @@ export function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-[var(--color-border)] bg-[var(--color-bg)] px-5 py-4 md:hidden"
+          className="container-px max-h-[min(70vh,calc(100dvh-env(safe-area-inset-top,0px)-4rem))] overflow-y-auto overscroll-y-contain border-t border-[var(--color-border)] bg-[var(--color-bg)] py-4 pb-[max(1rem,env(safe-area-inset-bottom,0px))] md:hidden"
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile primary">
             {mainNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium text-[var(--color-text)]"
+                className="min-h-12 rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium leading-snug text-[var(--color-text)]"
               >
                 {item.label}
               </Link>
@@ -122,7 +131,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="mt-2 inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-3 text-[var(--color-bg)]"
+                className="mt-2 inline-flex min-h-12 min-w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent)] px-3 py-3 text-[var(--color-bg)]"
               >
                 <IconLinkedIn className="h-6 w-6" />
               </a>

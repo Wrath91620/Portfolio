@@ -36,12 +36,46 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased leading-relaxed;
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  min-height: 100dvh;
+}
+
+/**
+ * Page gutters aligned with Tailwind px-5 / sm:px-6 / lg:px-8,
+ * plus env(safe-area-inset-*) for notched phones and landscape devices.
+ */
+@layer utilities {
+  .container-px {
+    padding-left: max(1.25rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1.25rem, env(safe-area-inset-right, 0px));
+  }
+  @media (min-width: 640px) {
+    .container-px {
+      padding-left: max(1.5rem, env(safe-area-inset-left, 0px));
+      padding-right: max(1.5rem, env(safe-area-inset-right, 0px));
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-px {
+      padding-left: max(2rem, env(safe-area-inset-left, 0px));
+      padding-right: max(2rem, env(safe-area-inset-right, 0px));
+    }
+  }
+}
+
+/* Snappier taps on touch devices; does not block pinch-zoom on the page */
+button,
+[role="button"] {
+  touch-action: manipulation;
 }
 
 ::selection {

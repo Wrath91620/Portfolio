@@ -14,7 +14,7 @@ export function ProjectCaseStudy({ project, index }) {
   const { wrap: logoWrapClass, img: logoImgClass } = projectLogoStyles(project.logoTreatment);
 
   return (
-    <article className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-shadow hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--color-accent)_25%,transparent)]">
+    <article className="min-w-0 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-shadow hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--color-accent)_25%,transparent)]">
       <div className="border-b border-[var(--color-border)] p-6 sm:p-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0 flex-1">
