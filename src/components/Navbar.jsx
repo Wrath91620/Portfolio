@@ -37,7 +37,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b pt-[env(safe-area-inset-top,0px)] transition-colors ${
         scrolled
-          ? "border-[var(--color-border)] bg-[var(--color-bg)]/92 backdrop-blur-xl"
+          ? "border-transparent bg-transparent"
           : "border-transparent bg-transparent"
       }`}
     >
