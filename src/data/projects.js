@@ -183,7 +183,7 @@ export const projects = [
       "https://s.wordpress.com/mshots/v1/https://aisyria.org/%D8%B9%D9%86-%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9/?w=1600",
       "https://s.wordpress.com/mshots/v1/https://aisyria.org/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7/?w=1600",
     ],
-    localLogoUrl: "/logos/ai-syria.png",
+    localLogoUrl: "/logos/ai-syria.webp",
     logoUrl: "https://logo.clearbit.com/aisyria.org",
     liveUrl: "https://aisyria.org",
     repoUrl: "",

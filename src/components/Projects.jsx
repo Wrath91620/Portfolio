@@ -10,7 +10,7 @@ export function Projects() {
       <SectionHeading
         eyebrow="Case studies"
         title="Work I have stood behind."
-        description="Each card is written the way I would explain it in an interview: what the situation was, what we chose, and what changed. Open any card for the full picture."
+        description="Projects included: Cham Clinic, Oppolia KSA, Oppolia Online, Tarta de Amor, CashCup Sports, ToysLab KSA, Hadiha, AI Syria, Gravity Wrestling Academy, Kraken, and Elite Edition. Open any card for the full picture."
       />
       <div className="flex flex-col gap-8 lg:gap-10">
         {projects.map((project, index) => (

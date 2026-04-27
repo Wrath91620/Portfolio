@@ -19,17 +19,17 @@ export function HomeExplore() {
       <div className="container-px mx-auto max-w-6xl py-20 sm:py-24">
         <SectionHeading
           eyebrow="Explore"
-          title="The rest of the site, page by page."
-          description="No endless homepage. Each section has room to breathe, whether you are hiring, buying services, or just curious."
+          title="A portfolio built as a system."
+          description="Each page has a specific purpose: credibility, proof, capability, and conversion."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
           {mainNav.map((item, i) => (
             <Reveal key={item.href} className={i % 3 === 1 ? "delay-75" : i % 3 === 2 ? "delay-100" : ""}>
               <Link
                 href={item.href}
-                className="group flex h-full min-h-[9.5rem] flex-col rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition-colors hover:border-[var(--color-accent)]/45"
+                className="group flex h-full min-h-[9.5rem] flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition-colors hover:border-[var(--color-accent)]/45"
               >
-                <span className="inline-flex items-center gap-1.5 font-display text-lg font-medium tracking-tight text-[var(--color-accent)]">
+                <span className="inline-flex items-center gap-1.5 font-display text-lg font-semibold tracking-tight text-[var(--color-accent)]">
                   {item.label}
                   <IconChevronRight className="transition-transform duration-200 group-hover:translate-x-0.5" />
                 </span>
