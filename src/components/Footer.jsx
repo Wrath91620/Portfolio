@@ -21,7 +21,7 @@ export function Footer() {
                 className="h-[200px] w-auto object-contain"
               />
             </Link>
-            <nav className="flex flex-col items-start gap-2 sm:items-center sm:gap-5" aria-label="Footer">
+            <nav className="flex flex-col self-center items-start gap-2 sm:items-center sm:gap-5" aria-label="Footer">
               <Link
                 href="/"
                 className="text-xs font-medium uppercase tracking-[0.08em] text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
