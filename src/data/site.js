@@ -26,7 +26,7 @@ export const site = {
     "software architecture",
     "portfolio",
   ],
-  linkedin: "https://linkedin.com/in/karimalrajjal",
+  linkedin: "https://www.linkedin.com/in/karim-alrajjal/",
   github: "",
   twitter: "",
   bookCallUrl: "",

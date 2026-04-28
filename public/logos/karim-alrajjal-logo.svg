@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Karim Alrajjal KR Logo</title>
+  <desc id="desc">White KR monogram with Karim Alrajjal wordmark and blue A accent on transparent background.</desc>
+  <defs>
+    <style>
+      .logo-white{fill:#ffffff;}
+      .accent{fill:#1e8cff;}
+      .word{font-family:'Satoshi','Montserrat','Poppins','Arial',sans-serif;font-weight:600;letter-spacing:32px;font-size:54px;}
+    </style>
+  </defs>
+
+  <!-- KR monogram -->
+  <g transform="translate(292 46) scale(1.08)">
+    <!-- K vertical stem -->
+    <path class="logo-white" d="M0 0 L58 58 L58 272 L0 330 Z"/>
+    <!-- K upper diagonal -->
+    <path class="logo-white" d="M130 142 L284 0 H382 L183 170 Z"/>
+    <!-- K lower diagonal -->
+    <path class="logo-white" d="M128 188 L222 188 L410 330 H298 Z"/>
+    <!-- R body/right letter -->
+    <path class="logo-white" d="M392 0 H640 C737 0 806 59 806 145 C806 218 758 269 688 284 L792 330 H655 L540 240 H655 C701 240 734 209 734 164 C734 119 700 86 653 86 H392 L454 0 Z"/>
+    <!-- R inner cut / horizontal negative space simulated by transparency from background -->
+    <path fill="transparent" d="M455 110 H655 C687 110 710 132 710 164 C710 197 687 218 655 218 H455 Z"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(128 382)">
+    <text class="word logo-white" x="0" y="0">KARIM</text>
+    <text class="word accent" x="410" y="0">A</text>
+    <text class="word logo-white" x="488" y="0">LRAJJAL</text>
+  </g>
+</svg>

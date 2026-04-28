@@ -1,22 +1,9 @@
-import { DM_Sans, Fraunces } from "next/font/google";
 import { site } from "@/data/site";
 import { Providers } from "@/components/Providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
 import "./globals.css";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
 
 const rootTitle = `${site.name} | ${site.title}`;
 
@@ -48,6 +35,11 @@ export const metadata = {
     card: "summary_large_image",
     title: rootTitle,
     description: site.description,
+  },
+  icons: {
+    icon: "/logos/karim-exact-logo.svg",
+    shortcut: "/logos/karim-exact-logo.svg",
+    apple: "/logos/Personal-logo.png",
   },
   robots: { index: true, follow: true },
   formatDetection: {
@@ -84,7 +76,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${dmSans.variable} ${fraunces.variable}`} suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>

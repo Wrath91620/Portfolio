@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { mainNav } from "@/data/nav";
 import { site } from "@/data/site";
 import { IconLinkedIn } from "./icons";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -44,9 +44,17 @@ export function Navbar() {
       <div className="container-px mx-auto flex h-16 max-w-6xl min-h-16 items-center justify-between gap-3">
         <Link
           href="/"
-          className="min-w-0 flex-1 truncate font-display text-base font-semibold tracking-tight text-[var(--color-text)] sm:flex-none sm:text-lg"
+          className="min-w-0 flex-1 sm:flex-none"
+          aria-label={`${site.name} home`}
         >
-          {site.name}
+          <Image
+            src="/logos/karim-exact-logo.svg"
+            alt={`${site.name} logo`}
+            width={240}
+            height={56}
+            priority
+            className="h-10 w-auto object-contain sm:h-11"
+          />
         </Link>
 
         <nav
@@ -73,7 +81,6 @@ export function Navbar() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
-          <ThemeToggle />
           {site.cvPath ? (
             <a
               href={site.cvPath}
