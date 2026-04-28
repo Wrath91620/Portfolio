@@ -18,7 +18,7 @@ export function Footer() {
                 alt={`${site.name} logo`}
                 width={240}
                 height={56}
-                className="h-10 w-auto object-contain sm:h-11"
+                className="h-[200px] w-auto object-contain"
               />
             </Link>
             <nav className="flex flex-col items-start gap-2 sm:items-center sm:gap-5" aria-label="Footer">

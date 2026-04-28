@@ -1,8 +1,5 @@
 export function SectionShell({ id, children, className = "", variant = "default" }) {
-  const bg =
-    variant === "muted"
-      ? "bg-[var(--color-surface)]/70 dark:bg-[var(--color-surface)]/45"
-      : "";
+  const bg = variant === "muted" ? "bg-[var(--color-surface)]/45" : "";
 
   return (
     <section

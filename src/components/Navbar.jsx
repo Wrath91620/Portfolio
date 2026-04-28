@@ -11,14 +11,6 @@ import { IconLinkedIn } from "./icons";
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -34,13 +26,7 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b pt-[env(safe-area-inset-top,0px)] transition-colors ${
-        scrolled
-          ? "border-transparent bg-transparent"
-          : "border-transparent bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent pt-[env(safe-area-inset-top,0px)] transition-colors">
       <div className="container-px mx-auto flex h-16 max-w-6xl min-h-16 items-center justify-between gap-3">
         <Link
           href="/"
@@ -48,7 +34,7 @@ export function Navbar() {
           aria-label={`${site.name} home`}
         >
           <Image
-            src="/logos/karim-exact-logo.svg"
+            src="/logos/Personal-logo.png"
             alt={`${site.name} logo`}
             width={240}
             height={56}

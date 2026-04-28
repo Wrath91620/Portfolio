@@ -6,11 +6,11 @@ import { Reveal } from "./Reveal";
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-[var(--color-border)] pt-[calc(6rem+env(safe-area-inset-top,0px))] pb-16 sm:pt-[calc(7rem+env(safe-area-inset-top,0px))] sm:pb-24 lg:pt-[calc(8rem+env(safe-area-inset-top,0px))] lg:pb-28">
-      <div className="pointer-events-none absolute inset-0 opacity-35 dark:opacity-25" aria-hidden>
+      <div className="pointer-events-none absolute inset-0 opacity-25" aria-hidden>
         <div className="absolute -left-1/4 top-0 h-[min(420px,50vw)] w-[min(420px,50vw)] rounded-full bg-[var(--color-accent)] blur-[120px]" />
         <div className="absolute -right-1/4 bottom-0 h-[min(360px,45vw)] w-[min(360px,45vw)] rounded-full bg-[var(--color-accent)] blur-[100px]" />
       </div>
-      <div className="grid-overlay pointer-events-none absolute inset-x-0 top-0 h-[min(62vh,560px)] opacity-35 dark:opacity-20" aria-hidden />
+      <div className="grid-overlay pointer-events-none absolute inset-x-0 top-0 h-[min(62vh,560px)] opacity-20" aria-hidden />
 
       <div className="container-px relative mx-auto max-w-6xl">
         <Reveal>

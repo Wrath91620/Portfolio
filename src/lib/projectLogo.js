@@ -1,10 +1,10 @@
 /**
- * Project card logos. `dark:` utilities follow `html.dark` via globals.css @custom-variant.
+ * Project card logos for a permanently dark UI.
  *
  * Treatments:
  * - darkChip: opaque dark PNG, always on a dark chip
- * - darkArtwork: dark SVG, natural in light, white in dark
- * - lightArtwork: white-filled SVG, black in light, natural in dark
+ * - darkArtwork: dark SVG forced to invert for visibility
+ * - lightArtwork: white-filled SVG shown as-is
  */
 
 export const LOGO_TREATMENT = {
@@ -26,13 +26,13 @@ export function projectLogoStyles(treatment) {
       };
     case LOGO_TREATMENT.darkArtwork:
       return {
-        wrap: "bg-[var(--color-bg)] dark:bg-zinc-900",
-        img: `${base} dark:brightness-0 dark:invert`,
+        wrap: "bg-zinc-900",
+        img: `${base} brightness-0 invert`,
       };
     case LOGO_TREATMENT.lightArtwork:
       return {
         wrap: "bg-[var(--color-bg)]",
-        img: `${base} brightness-0 dark:brightness-100`,
+        img: `${base} brightness-100`,
       };
     default:
       return {
