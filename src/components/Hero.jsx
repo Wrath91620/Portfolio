@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
-import { IconLinkedIn } from "./icons";
+import { IconChevronRight } from "./icons";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
@@ -28,7 +28,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal className="delay-100">
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-text-muted)] sm:text-xl">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg lg:text-xl">
             I am Karim Alrajjal, a full stack engineer and team lead building premium web products with clear architecture,
             reliable delivery, and strong attention to business impact. From strategy to frontend and backend execution, I
             focus on work that stays fast, intentional, and production-ready.
@@ -36,23 +36,19 @@ export function Hero() {
         </Reveal>
 
         <Reveal className="delay-150">
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-            {site.linkedin ? (
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="inline-flex w-full min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3.5 text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:w-auto"
-              >
-                <IconLinkedIn className="h-6 w-6" />
-              </a>
-            ) : null}
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3.5">
             <Link
               href="/work"
+              className="group inline-flex w-full min-h-12 items-center justify-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-3.5 text-center text-base font-semibold text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)] sm:w-auto"
+            >
+              View Projects
+              <IconChevronRight className="transition-transform duration-200 group-hover:translate-x-0.5" />
+            </Link>
+            <Link
+              href="/#contact"
               className="inline-flex w-full min-h-12 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-3.5 text-center text-base font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] sm:w-auto"
             >
-              View my projects
+              Contact Me
             </Link>
             {site.cvPath ? (
               <Link
@@ -78,16 +74,40 @@ export function Hero() {
 
         {site.metrics.length > 0 ? (
           <Reveal className="delay-[250ms]">
-            <dl className="mt-14 grid grid-cols-2 gap-6 border-t border-[var(--color-border)] pt-10 sm:grid-cols-3">
+            <dl className="mt-12 grid grid-cols-2 gap-4 border-t border-[var(--color-border)] pt-8 sm:grid-cols-3 sm:gap-5 sm:pt-10">
               {site.metrics.map((m) => (
-                <div key={m.label}>
-                  <dt className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-muted)]">{m.label}</dt>
+                <div
+                  key={m.label}
+                  className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4"
+                >
+                  <dt className="text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--color-text-muted)]">
+                    {m.label}
+                  </dt>
                   <dd className="mt-1 font-display text-2xl font-medium text-[var(--color-text)]">{m.value}</dd>
                 </div>
               ))}
             </dl>
           </Reveal>
         ) : null}
+        <Reveal className="delay-[300ms]">
+          <ul className="mt-7 flex flex-wrap gap-2">
+            <li className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs text-[var(--color-text-muted)]">
+              React
+            </li>
+            <li className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs text-[var(--color-text-muted)]">
+              Next.js
+            </li>
+            <li className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs text-[var(--color-text-muted)]">
+              Node.js
+            </li>
+            <li className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs text-[var(--color-text-muted)]">
+              Laravel
+            </li>
+            <li className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs text-[var(--color-text-muted)]">
+              Technical SEO
+            </li>
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

@@ -12,6 +12,9 @@ export function pageMetadata({ path, title, description }) {
   const canonicalPath = path === "/" || !path ? "/" : path.startsWith("/") ? path : `/${path}`;
   const url = `${baseUrl()}${canonicalPath === "/" ? "/" : canonicalPath}`;
   const ogTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+  const image = site.ogImage
+    ? [{ url: site.ogImage, width: 1200, height: 630, alt: `${site.name} portfolio preview` }]
+    : undefined;
 
   return {
     title,
@@ -25,11 +28,13 @@ export function pageMetadata({ path, title, description }) {
       siteName: site.name,
       locale: site.locale.replace("_", "-"),
       type: "website",
+      images: image,
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
       description,
+      images: site.ogImage ? [site.ogImage] : undefined,
     },
   };
 }

@@ -14,9 +14,22 @@ export function ProjectCaseStudy({ project, index }) {
   const { wrap: logoWrapClass, img: logoImgClass } = projectLogoStyles(project.logoTreatment);
 
   return (
-    <article className="min-w-0 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-shadow hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--color-accent)_25%,transparent)]">
+    <article className="group min-w-0 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_70px_-42px_color-mix(in_oklch,var(--color-accent)_65%,transparent)]">
+      <div className="relative aspect-[16/9] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]">
+        {project.imageUrl ? (
+          <Image
+            src={project.imageUrl}
+            alt={`${project.name} preview`}
+            fill
+            unoptimized
+            sizes="(min-width: 1024px) 768px, 100vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        ) : null}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/70 via-transparent to-transparent" />
+      </div>
       <div className="border-b border-[var(--color-border)] p-6 sm:p-8">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0 flex-1">
             <span className="font-mono text-xs text-[var(--color-text-muted)]">{String(index + 1).padStart(2, "0")}</span>
             <h3 className="mt-1 font-display text-2xl font-medium tracking-tight text-[var(--color-text)]">{project.name}</h3>
@@ -26,7 +39,7 @@ export function ProjectCaseStudy({ project, index }) {
               {project.stack.map((tech) => (
                 <li
                   key={tech}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-2.5 py-1 text-xs font-medium text-[var(--color-text)]"
+                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-2.5 py-1 text-xs font-medium text-[var(--color-text)] transition-colors group-hover:border-[var(--color-accent)]/35"
                 >
                   {tech}
                 </li>
@@ -54,46 +67,45 @@ export function ProjectCaseStudy({ project, index }) {
                 </div>
               </a>
             ) : null}
-            {project.liveUrl ? (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
+            <div className="flex flex-wrap gap-2 sm:justify-end">
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-[var(--color-accent)] px-4 py-2 text-xs font-semibold text-[var(--color-bg)] transition-colors hover:bg-[var(--color-accent-hover)]"
+                >
+                  Live Demo
+                  <IconChevronRight className="opacity-80" />
+                </a>
+              ) : null}
+              <button
+                type="button"
+                aria-expanded={open}
+                aria-controls={panelId}
+                onClick={() => setOpen((v) => !v)}
+                className="inline-flex min-h-10 items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-xs font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
               >
-                Visit site
-                <IconChevronRight className="opacity-80" />
-              </a>
-            ) : null}
-            {project.repoUrl ? (
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-text-muted)] underline-offset-4 hover:text-[var(--color-text)] hover:underline"
-              >
-                View code
-                <IconChevronRight className="opacity-80" />
-              </a>
-            ) : null}
+                {open ? "Hide Case Study" : "Case Study"}
+                <IconChevronDown className={`transition-transform ${open ? "rotate-180" : ""}`} />
+              </button>
+              {project.repoUrl ? (
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-10 items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-xs font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
+                >
+                  GitHub
+                  <IconChevronRight className="opacity-80" />
+                </a>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
 
       <div className="p-6 sm:px-8 sm:pb-8 sm:pt-0">
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-controls={panelId}
-          onClick={() => setOpen((v) => !v)}
-          className="flex w-full items-center justify-between gap-4 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-left text-sm font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
-        >
-          <span>{open ? "Hide the story" : "How I approached it"}</span>
-          <IconChevronDown
-            className={`text-[var(--color-text-muted)] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-          />
-        </button>
-
         <div id={panelId} hidden={!open} className={open ? "mt-6 block" : "hidden"}>
           <div className="grid gap-8 lg:grid-cols-2">
             <div>

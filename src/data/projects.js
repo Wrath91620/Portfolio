@@ -4,6 +4,30 @@
 
 export const projects = [
   {
+    id: "tgmena",
+    name: "TGMENA",
+    tagline: "Digital ecosystem delivery across product pages, growth surfaces, and operational workflows.",
+    context:
+      "At TGMENA, I led and shipped web products and growth-focused surfaces where content quality, performance, and structured delivery directly impacted visibility and business momentum.",
+    problem:
+      "The challenge was balancing speed and quality across multiple workstreams while keeping architecture, SEO discipline, and production stability aligned.",
+    solution:
+      "Established clear implementation patterns, shipped critical frontend and backend tasks, and aligned technical SEO, performance improvements, and execution standards across releases.",
+    stack: ["Next.js", "Node.js", "MySQL", "Technical SEO", "Performance optimization"],
+    outcome:
+      "Improved delivery consistency and search-performance outcomes with production-ready launches supported by clearer engineering standards.",
+    proofPoints: [
+      "Multiple production releases shipped with cross-team coordination",
+      "Technical SEO and performance improvements integrated into delivery flow",
+    ],
+    imageUrl: "/projects/tgmena.png",
+    screenshots: ["/projects/tgmena.png"],
+    localLogoUrl: "/logos/TG.png",
+    logoUrl: "https://logo.clearbit.com/tgmena.com",
+    liveUrl: "https://tgmena.com",
+    repoUrl: "",
+  },
+  {
     id: "cham-clinic",
     name: "Cham Clinic",
     tagline: "Bilingual healthcare platform for specialty and corporate medical services.",
@@ -16,9 +40,9 @@ export const projects = [
     stack: ["JavaScript", "Bilingual UX", "Healthcare content architecture", "Responsive UI"],
     outcome: "Delivered a professional, trust first medical web presence with strong service clarity and communication flow.",
     proofPoints: ["Live bilingual production website", "Service, doctor, and corporate program IA shipped end to end"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://cham.clinic?w=1600",
+    imageUrl: "/projects/cham-clinic.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://cham.clinic?w=1600",
+      "/projects/cham-clinic.jpg",
       "https://s.wordpress.com/mshots/v1/https://cham.clinic/#services?w=1600",
       "https://s.wordpress.com/mshots/v1/https://cham.clinic/#contact?w=1600",
     ],
@@ -41,9 +65,9 @@ export const projects = [
     stack: ["JavaScript", "Catalog UX", "Brand first UI", "Lead generation structure"],
     outcome: "Shipped a polished Saudi market web experience that supports both discovery and sales conversations.",
     proofPoints: ["Live production catalog website", "Category architecture and enquiry paths implemented for conversion"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://oppoliaksa.com?w=1600",
+    imageUrl: "/projects/oppolia-ksa.png",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://oppoliaksa.com?w=1600",
+      "/projects/oppolia-ksa.png",
       "https://s.wordpress.com/mshots/v1/https://oppoliaksa.com/product-category/%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE/?w=1600",
       "https://s.wordpress.com/mshots/v1/https://oppoliaksa.com/product-category/%D8%AE%D8%B2%D8%A7%D8%A6%D9%86/?w=1600",
     ],
@@ -65,9 +89,9 @@ export const projects = [
     stack: ["JavaScript", "Service journey UX", "Conversion copy structure", "Responsive frontend"],
     outcome: "Delivered a clear and personalized online process that simplifies the path from idea to installed kitchen.",
     proofPoints: ["Live service-journey website", "Appointment-to-installation journey mapped and shipped"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://oppoliaonline.com?w=1600",
+    imageUrl: "/projects/oppolia-online.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://oppoliaonline.com?w=1600",
+      "/projects/oppolia-online.jpg",
       "https://s.wordpress.com/mshots/v1/https://oppoliaonline.com/about-us/?w=1600",
       "https://s.wordpress.com/mshots/v1/https://oppoliaonline.com/contact-us/?w=1600",
     ],
@@ -89,9 +113,9 @@ export const projects = [
     stack: ["JavaScript", "Brand storytelling", "Premium UI", "Responsive commerce presentation"],
     outcome: "Delivered a strong emotional brand identity that makes the product feel like an experience.",
     proofPoints: ["Live premium brand website", "Story-led product presentation and key brand sections delivered"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://tartadeamor.com?w=1600",
+    imageUrl: "/projects/tarta-de-amor.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://tartadeamor.com?w=1600",
+      "/projects/tarta-de-amor.jpg",
       "https://s.wordpress.com/mshots/v1/https://tartadeamor.com/#our-story?w=1600",
       "https://s.wordpress.com/mshots/v1/https://tartadeamor.com/#visit-us?w=1600",
     ],
@@ -113,9 +137,9 @@ export const projects = [
     stack: ["JavaScript", "Sports platform UX", "Event flow architecture", "Responsive frontend"],
     outcome: "Shipped a modern grassroots football platform with professional competition structure.",
     proofPoints: ["Live tournament platform in production", "Registration, match center, and team/player journeys implemented"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://cashcupsports.com?w=1600",
+    imageUrl: "/projects/cashcup-sports.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://cashcupsports.com?w=1600",
+      "/projects/cashcup-sports.jpg",
       "https://s.wordpress.com/mshots/v1/https://cashcupsports.com/en/tournaments?w=1600",
       "https://s.wordpress.com/mshots/v1/https://cashcupsports.com/en/match-center?w=1600",
     ],
@@ -137,9 +161,9 @@ export const projects = [
     stack: ["JavaScript", "Ecommerce UX", "Bilingual navigation", "Retail category architecture"],
     outcome: "Delivered a playful but structured store experience optimized for product discovery and shopping clarity.",
     proofPoints: ["Live bilingual ecommerce storefront", "Product discovery and category navigation rebuilt for scale"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://toyslabksa.com?w=1600",
+    imageUrl: "/projects/toyslab-ksa.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://toyslabksa.com?w=1600",
+      "/projects/toyslab-ksa.jpg",
       "https://s.wordpress.com/mshots/v1/https://toyslabksa.com/en/collections/all?w=1600",
       "https://s.wordpress.com/mshots/v1/https://toyslabksa.com/en/collections/educational-games-and-constructions?w=1600",
     ],
@@ -161,9 +185,9 @@ export const projects = [
     stack: ["JavaScript", "Niche brand positioning", "Conversion copy", "Ecommerce layout"],
     outcome: "Created a distinct identity driven storefront with clear emotional positioning and focused product communication.",
     proofPoints: ["Live niche ecommerce website", "Messaging and merchandising aligned to brand positioning"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://hadiha.com?w=1600",
+    imageUrl: "/projects/hadiha.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://hadiha.com?w=1600",
+      "/projects/hadiha.jpg",
       "https://s.wordpress.com/mshots/v1/https://hadiha.com/collections/all?w=1600",
       "https://s.wordpress.com/mshots/v1/https://hadiha.com/products?w=1600",
     ],
@@ -185,9 +209,9 @@ export const projects = [
     stack: ["JavaScript", "Community platform UX", "Arabic first content structure", "Responsive web"],
     outcome: "Delivered a modern engagement platform aligned with education, community growth, and initiative visibility.",
     proofPoints: ["Live nonprofit/community platform", "Arabic-first information architecture and engagement paths delivered"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://aisyria.org?w=1600",
+    imageUrl: "/projects/ai-syria.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://aisyria.org?w=1600",
+      "/projects/ai-syria.jpg",
       "https://s.wordpress.com/mshots/v1/https://aisyria.org/%D8%B9%D9%86-%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9/?w=1600",
       "https://s.wordpress.com/mshots/v1/https://aisyria.org/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7/?w=1600",
     ],
@@ -209,9 +233,9 @@ export const projects = [
     stack: ["JavaScript", "Sports brand web design", "Responsive frontend"],
     outcome: "Delivered a professional academy web presence optimized for first impression and service discovery.",
     proofPoints: ["Live sports academy website", "Brand and service presentation shipped in responsive layout"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://gravity-teal.vercel.app?w=1600",
+    imageUrl: "/projects/gravity-wrestling.jpg",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://gravity-teal.vercel.app?w=1600",
+      "/projects/gravity-wrestling.jpg",
       "https://s.wordpress.com/mshots/v1/https://gravity-teal.vercel.app/#programs?w=1600",
       "https://s.wordpress.com/mshots/v1/https://gravity-teal.vercel.app/#contact?w=1600",
     ],
@@ -233,9 +257,9 @@ export const projects = [
     stack: ["JavaScript", "Creative portfolio UX", "Visual presentation design"],
     outcome: "Delivered a clean production brand website designed to showcase services and strengthen presentation quality.",
     proofPoints: ["Live creative portfolio website", "Service-led visual hierarchy and navigation implemented"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://kraken-brown.vercel.app?w=1600",
+    imageUrl: "/projects/kraken.png",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://kraken-brown.vercel.app?w=1600",
+      "/projects/kraken.png",
       "https://s.wordpress.com/mshots/v1/https://kraken-brown.vercel.app/#services?w=1600",
       "https://s.wordpress.com/mshots/v1/https://kraken-brown.vercel.app/#contact?w=1600",
     ],
@@ -258,9 +282,9 @@ export const projects = [
     stack: ["JavaScript", "Luxury UI systems", "Inventory presentation architecture", "Conversion focused UX"],
     outcome: "Delivered a polished showroom website aligned with premium positioning and high touch customer journeys.",
     proofPoints: ["Live luxury showroom website", "Enquiry-first inventory and service journey deployed"],
-    imageUrl: "https://s.wordpress.com/mshots/v1/https://elite-edition.vercel.app/en?w=1600",
+    imageUrl: "/projects/elite-edition.png",
     screenshots: [
-      "https://s.wordpress.com/mshots/v1/https://elite-edition.vercel.app/en?w=1600",
+      "/projects/elite-edition.png",
       "https://s.wordpress.com/mshots/v1/https://elite-edition.vercel.app/en#inventory?w=1600",
       "https://s.wordpress.com/mshots/v1/https://elite-edition.vercel.app/en#contact?w=1600",
     ],

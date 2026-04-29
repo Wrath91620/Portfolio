@@ -29,11 +29,15 @@ export const metadata = {
     siteName: site.name,
     locale: site.locale.replace("_", "-"),
     type: "website",
+    images: site.ogImage
+      ? [{ url: site.ogImage, width: 1200, height: 630, alt: `${site.name} portfolio preview` }]
+      : undefined,
   },
   twitter: {
     card: "summary_large_image",
     title: rootTitle,
     description: site.description,
+    images: site.ogImage ? [site.ogImage] : undefined,
   },
   icons: {
     icon: "/logos/karim-exact-logo.svg",

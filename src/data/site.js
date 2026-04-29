@@ -7,11 +7,13 @@ export const site = {
   title: "Development Team Lead & Full Stack Engineer",
   tagline:
     "SaaS systems, data workflows, and production web and mobile owned end to end from architecture to delivery.",
+  email: "",
   phone: "",
   url: "https://yourdomain.com",
   /** Primary meta description (~155 characters) for search and sharing */
   description:
     "Karim Alrajjal: development team lead and full stack engineer for SaaS, data workflows, technical SEO, web and mobile, and integrations. Production focused delivery.",
+  ogImage: "/logos/Personal-logo.png",
   keywords: [
     "Karim Alrajjal",
     "full stack engineer",
