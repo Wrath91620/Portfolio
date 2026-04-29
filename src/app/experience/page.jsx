@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   path: "/experience",
   title: "Experience",
-  description: `Engineering timeline: team lead, full stack delivery, architecture ownership. ${site.name}.`,
+  description: `Career timeline of ${site.name}: development team lead roles, full stack delivery ownership, and architecture leadership.`,
 });
 
 export default function ExperiencePage() {

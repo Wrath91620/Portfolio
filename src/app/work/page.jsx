@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   path: "/work",
   title: "Work",
-  description: `Case studies and production systems: SaaS, web, mobile, and integrations. ${site.name}.`,
+  description: `Portfolio case studies by ${site.name}: production web and mobile systems, integration-heavy builds, and measurable business outcomes.`,
 });
 
 export default function WorkPage() {

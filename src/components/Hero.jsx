@@ -22,7 +22,7 @@ export function Hero() {
 
         <Reveal className="delay-75">
           <h1 className="max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-[var(--color-text)] sm:text-5xl lg:text-[3.5rem]">
-            I design and ship digital systems that perform,
+            Full stack engineer and tech lead for businesses that need systems that perform,
             <span className="text-[var(--color-text-muted)]"> scale, and convert.</span>
           </h1>
         </Reveal>

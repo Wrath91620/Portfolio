@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   path: "/about",
   title: "About",
   description:
-    "Background, leadership style, and how Karim Alrajjal works with engineering teams, stakeholders, and product owners.",
+    "Karim Alrajjal's background, leadership style, and approach to architecture, delivery rhythm, and cross-functional engineering collaboration.",
 });
 
 export default function AboutPage() {

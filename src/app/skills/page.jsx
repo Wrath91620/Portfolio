@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   path: "/skills",
   title: "Skills",
-  description: `System architecture, frontend, backend, data, CMS, and automation. ${site.name}.`,
+  description: `${site.name} skills across system architecture, frontend and backend engineering, data, CMS platforms, and automation workflows.`,
 });
 
 export default function SkillsPage() {

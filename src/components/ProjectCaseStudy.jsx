@@ -109,6 +109,21 @@ export function ProjectCaseStudy({ project, index }) {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">What changed</h4>
             <p className="mt-2 text-sm font-medium leading-relaxed text-[var(--color-text)]">{project.outcome}</p>
           </div>
+          {project.proofPoints?.length ? (
+            <div className="mt-8 border-t border-[var(--color-border)] pt-8">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+                Proof points
+              </h4>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                {project.proofPoints.map((point) => (
+                  <li key={point} className="flex gap-2.5">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--color-accent)]" aria-hidden />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
       </div>
     </article>

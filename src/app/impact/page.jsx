@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   path: "/impact",
   title: "Impact",
-  description: `How Karim measures delivery: SEO, traffic, performance, documentation, and handoffs. Metrics, focus areas, and signals tracked on real builds. ${site.name}.`,
+  description: `How ${site.name} measures impact across SEO, traffic growth, Core Web Vitals, delivery quality, and production handoffs.`,
 });
 
 export default function ImpactPage() {

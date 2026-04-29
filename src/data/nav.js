@@ -15,5 +15,7 @@ export const footerNav = [
   { href: "/work", label: "Work" },
   { href: "/impact", label: "Impact" },
   { href: "/about", label: "About" },
+  { href: "/skills", label: "Skills" },
+  { href: "/experience", label: "Experience" },
   { href: "/services", label: "Services" },
 ];
