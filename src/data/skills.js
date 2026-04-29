@@ -23,6 +23,7 @@ export const skillGroups = [
     title: "Backend & APIs",
     items: [
       "Node.js & Express.js",
+      "Laravel",
       "REST APIs & authentication",
       "Integrations (payments, CRM, internal tools)",
       "Flutter & Firebase for mobile delivery",
