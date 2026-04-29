@@ -1,4 +1,5 @@
 import path from "path";
+import fs from "fs";
 import { fileURLToPath } from "url";
 
 /** Force Next to use this folder as the project root (fixes wrong root when another lockfile exists higher up, e.g. C:\Users\You\). */
@@ -7,7 +8,8 @@ const githubRepository = process.env.GITHUB_REPOSITORY || "";
 const [repoOwner = "", repoName = ""] = githubRepository.split("/");
 const isUserSiteRepo = repoName.toLowerCase() === `${repoOwner.toLowerCase()}.github.io`;
 const isGithubPagesBuild = process.env.GITHUB_ACTIONS === "true";
-const basePath = isGithubPagesBuild && !isUserSiteRepo && repoName ? `/${repoName}` : "";
+const hasCustomDomain = fs.existsSync(path.join(projectRoot, "public", "CNAME"));
+const basePath = isGithubPagesBuild && !isUserSiteRepo && !hasCustomDomain && repoName ? `/${repoName}` : "";
 
 const nextConfig = {
   reactStrictMode: true,

@@ -9,7 +9,7 @@ export const site = {
     "SaaS systems, data workflows, and production web and mobile owned end to end from architecture to delivery.",
   email: "",
   phone: "",
-  url: "https://yourdomain.com",
+  url: "https://www.kareemportfolio.com",
   /** Primary meta description (~155 characters) for search and sharing */
   description:
     "Karim Alrajjal: development team lead and full stack engineer for SaaS, data workflows, technical SEO, web and mobile, and integrations. Production focused delivery.",
