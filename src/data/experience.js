@@ -4,13 +4,15 @@
  *
  * Optional: `localLogoUrl` and `logoTreatment` match project logos on the work page.
  */
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const withBase = (assetPath) => `${assetBase}${assetPath}`;
 
 export const experience = [
   {
     company: "TGMENA",
     location: "",
     websiteUrl: "https://tgmena.com",
-    localLogoUrl: "/logos/TG.png",
+    localLogoUrl: withBase("/logos/TG.png"),
     logoUrl: "https://logo.clearbit.com/tgmena.com",
     roles: [
       {
@@ -28,7 +30,7 @@ export const experience = [
     company: "SarrdehTech",
     location: "Damascus, Syria",
     websiteUrl: "https://sarrdeh-tech.com",
-    localLogoUrl: "/logos/Sarrdeh-tech.webp",
+    localLogoUrl: withBase("/logos/Sarrdeh-tech.webp"),
     logoUrl: "https://logo.clearbit.com/sarrdeh-tech.com",
     roles: [
       {

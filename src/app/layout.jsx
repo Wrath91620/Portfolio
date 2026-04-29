@@ -5,6 +5,7 @@ import { SkipLink } from "@/components/SkipLink";
 import "./globals.css";
 
 const rootTitle = `${site.name} | ${site.title}`;
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const viewport = {
   width: "device-width",
@@ -40,9 +41,9 @@ export const metadata = {
     images: site.ogImage ? [site.ogImage] : undefined,
   },
   icons: {
-    icon: "/logos/karim-exact-logo.svg",
-    shortcut: "/logos/karim-exact-logo.svg",
-    apple: "/logos/Personal-logo.png",
+    icon: `${assetBase}/logos/karim-exact-logo.svg`,
+    shortcut: `${assetBase}/logos/karim-exact-logo.svg`,
+    apple: `${assetBase}/logos/Personal-logo.png`,
   },
   robots: { index: true, follow: true },
   formatDetection: {

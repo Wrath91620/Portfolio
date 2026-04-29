@@ -5,6 +5,7 @@ import { site } from "@/data/site";
 import { IconLinkedIn } from "./icons";
 
 export function Footer() {
+  const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const year = new Date().getFullYear();
 
   return (
@@ -14,7 +15,7 @@ export function Footer() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-evenly">
             <Link href="/" aria-label={`${site.name} home`} className="inline-flex">
               <Image
-                src="/logos/karim-exact-logo.svg"
+                src={`${assetBase}/logos/karim-exact-logo.svg`}
                 alt={`${site.name} logo`}
                 width={240}
                 height={56}

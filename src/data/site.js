@@ -1,6 +1,7 @@
 /**
  * CUSTOMIZE: Name, role, URLs, metrics. Single source of truth.
  */
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const site = {
   name: "Karim Alrajjal",
@@ -13,7 +14,7 @@ export const site = {
   /** Primary meta description (~155 characters) for search and sharing */
   description:
     "Karim Alrajjal: development team lead and full stack engineer for SaaS, data workflows, technical SEO, web and mobile, and integrations. Production focused delivery.",
-  ogImage: "/logos/Personal-logo.png",
+  ogImage: `${assetBase}/logos/Personal-logo.png`,
   keywords: [
     "Karim Alrajjal",
     "full stack engineer",

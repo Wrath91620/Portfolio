@@ -9,6 +9,7 @@ import { site } from "@/data/site";
 import { IconLinkedIn } from "./icons";
 
 export function Navbar() {
+  const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -34,7 +35,7 @@ export function Navbar() {
           aria-label={`${site.name} home`}
         >
           <Image
-            src="/logos/Personal-logo.png"
+            src={`${assetBase}/logos/Personal-logo.png`}
             alt={`${site.name} logo`}
             width={240}
             height={56}
