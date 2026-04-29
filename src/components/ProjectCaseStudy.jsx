@@ -52,7 +52,7 @@ export function ProjectCaseStudy({ project, index }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mb-1 inline-flex overflow-hidden rounded-md border border-[var(--color-border)] ${logoWrapClass}`}
+                className={`mb-1 inline-flex overflow-hidden rounded-md border border-[var(--color-border)] bg-zinc-900 ${logoWrapClass}`}
                 title={`Open ${project.name}`}
               >
                 <div className="relative h-11 w-24">
