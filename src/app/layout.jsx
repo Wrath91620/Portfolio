@@ -6,6 +6,7 @@ import BlueSparksCanvas from "@/components/BlueSparksCanvas";
 import "./globals.css";
 
 const rootTitle = `${site.name} | ${site.title}`;
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const viewport = {
   width: "device-width",
@@ -42,12 +43,12 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: "/logos/Personal-logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/logos/Personal-logo.png", sizes: "192x192", type: "image/png" },
-      { url: "/logos/karim-exact-logo.svg", type: "image/svg+xml" },
+      { url: `${assetBase}/logos/Personal-logo.png`, sizes: "32x32", type: "image/png" },
+      { url: `${assetBase}/logos/Personal-logo.png`, sizes: "192x192", type: "image/png" },
+      { url: `${assetBase}/logos/karim-exact-logo.svg`, type: "image/svg+xml" },
     ],
-    shortcut: ["/logos/Personal-logo.png"],
-    apple: [{ url: "/logos/Personal-logo.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [`${assetBase}/logos/Personal-logo.png`],
+    apple: [{ url: `${assetBase}/logos/Personal-logo.png`, sizes: "180x180", type: "image/png" }],
   },
   robots: { index: true, follow: true },
   formatDetection: {
