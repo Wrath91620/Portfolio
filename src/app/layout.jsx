@@ -2,10 +2,10 @@ import { site } from "@/data/site";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
+import BlueSparksCanvas from "@/components/BlueSparksCanvas";
 import "./globals.css";
 
 const rootTitle = `${site.name} | ${site.title}`;
-const absoluteAssetUrl = (assetPath) => `${site.url}${assetPath}`;
 
 export const viewport = {
   width: "device-width",
@@ -41,9 +41,13 @@ export const metadata = {
     images: site.ogImage ? [site.ogImage] : undefined,
   },
   icons: {
-    icon: absoluteAssetUrl("/logos/karim-exact-logo.svg"),
-    shortcut: absoluteAssetUrl("/logos/karim-exact-logo.svg"),
-    apple: absoluteAssetUrl("/logos/Personal-logo.png"),
+    icon: [
+      { url: "/logos/Personal-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logos/Personal-logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/logos/karim-exact-logo.svg", type: "image/svg+xml" },
+    ],
+    shortcut: ["/logos/Personal-logo.png"],
+    apple: [{ url: "/logos/Personal-logo.png", sizes: "180x180", type: "image/png" }],
   },
   robots: { index: true, follow: true },
   formatDetection: {
@@ -85,6 +89,7 @@ export default function RootLayout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className="min-h-screen font-sans">
+        <BlueSparksCanvas />
         <SkipLink />
         <Navbar />
         <main id="main-content" tabIndex={-1}>
