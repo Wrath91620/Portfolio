@@ -17,6 +17,23 @@ type Spark = {
 
 const BRAND_BLUE = "#3b82f6"; // change this to your exact brand blue
 
+/** Mobile / narrow viewports: canvas shadows + high DPR + many particles destroy GPU time. */
+function getPerformanceProfile(w: number) {
+  const narrow = w < 768;
+  const veryNarrow = w < 480;
+  return {
+    /** Cap backing-store scale (retina 3x = 9x pixels). */
+    maxDpr: veryNarrow ? 1 : narrow ? 1.25 : 2,
+    maxParticles: veryNarrow ? 24 : narrow ? 36 : Math.min(130, Math.floor(w / 12)),
+    /** shadowBlur is extremely expensive on mobile; use flat fills instead. */
+    useShadow: !narrow,
+    /** Full-screen gradient every frame is costly; skip on small screens. */
+    drawHaze: !narrow,
+    /** Blending the full viewport is expensive; keep normal on mobile. */
+    useScreenBlend: !narrow,
+  };
+}
+
 export default function BlueSparksCanvas() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const sparksRef = useRef<Spark[]>([]);
@@ -30,24 +47,28 @@ export default function BlueSparksCanvas() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true, desynchronized: true });
     if (!ctx) return;
 
     let width = window.innerWidth;
     let height = window.innerHeight;
-    let dpr = window.devicePixelRatio || 1;
+    let dpr = 1;
     let darknessBoost = 1;
+    let profile = getPerformanceProfile(width);
 
     const resize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
-      dpr = window.devicePixelRatio || 1;
+      profile = getPerformanceProfile(width);
+      const rawDpr = window.devicePixelRatio || 1;
+      dpr = Math.min(rawDpr, profile.maxDpr);
 
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
 
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
+      canvas.style.mixBlendMode = profile.useScreenBlend ? "screen" : "normal";
 
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       updateDarknessBoost();
@@ -101,7 +122,7 @@ export default function BlueSparksCanvas() {
     };
 
     const resetSparks = () => {
-      const count = Math.min(130, Math.floor(width / 12));
+      const count = profile.maxParticles;
       sparksRef.current = Array.from({ length: count }, createSpark);
     };
 
@@ -117,9 +138,16 @@ export default function BlueSparksCanvas() {
       ctx.save();
 
       ctx.globalAlpha = alpha;
-      ctx.shadowBlur = spark.blur * darknessBoost;
-      ctx.shadowColor = BRAND_BLUE;
-      ctx.fillStyle = BRAND_BLUE;
+
+      if (profile.useShadow) {
+        ctx.shadowBlur = spark.blur * darknessBoost;
+        ctx.shadowColor = BRAND_BLUE;
+        ctx.fillStyle = BRAND_BLUE;
+      } else {
+        ctx.shadowBlur = 0;
+        // Cheap soft dot without shadow pipeline (mobile).
+        ctx.fillStyle = `rgba(147, 197, 253, ${Math.min(1, 0.55 + alpha * 0.35)})`;
+      }
 
       ctx.beginPath();
       ctx.arc(spark.x, spark.y, spark.size, 0, Math.PI * 2);
@@ -150,21 +178,22 @@ export default function BlueSparksCanvas() {
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Optional very subtle atmospheric blue haze
-      const gradient = ctx.createRadialGradient(
-        width / 2,
-        height / 2,
-        0,
-        width / 2,
-        height / 2,
-        Math.max(width, height) / 1.2
-      );
+      if (profile.drawHaze) {
+        const gradient = ctx.createRadialGradient(
+          width / 2,
+          height / 2,
+          0,
+          width / 2,
+          height / 2,
+          Math.max(width, height) / 1.2
+        );
 
-      gradient.addColorStop(0, "rgba(59, 130, 246, 0.025)");
-      gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+        gradient.addColorStop(0, "rgba(59, 130, 246, 0.025)");
+        gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, width, height);
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+      }
 
       for (const spark of sparksRef.current) {
         updateSpark(spark);
@@ -177,7 +206,7 @@ export default function BlueSparksCanvas() {
     resize();
     updateDarknessBoost();
     resetSparks();
-    animate();
+    animationRef.current = requestAnimationFrame(animate);
 
     const onResize = () => {
       resize();
@@ -199,9 +228,6 @@ export default function BlueSparksCanvas() {
       ref={canvasRef}
       aria-hidden="true"
       className="fixed inset-0 z-0 pointer-events-none"
-      style={{
-        mixBlendMode: "screen",
-      }}
     />
   );
 }
