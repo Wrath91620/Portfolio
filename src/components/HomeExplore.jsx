@@ -5,12 +5,12 @@ import { SectionHeading } from "./SectionHeading";
 import { IconChevronRight } from "./icons";
 
 const blurbs = {
-  "/work": "Real builds with context, constraints, and what actually shipped.",
-  "/about": "Background, how I lead, and what it is like to work with me.",
-  "/impact": "Traffic, rankings, and delivery you can measure.",
-  "/skills": "Tools and practices I rely on in production, not a laundry list.",
-  "/experience": "Teams I have been part of and what I owned.",
-  "/services": "Ways I can plug in, from builds to integrations to SEO.",
+  "/work": "Production projects with context, constraints, implementation choices, and shipped outcomes.",
+  "/about": "How I work as a developer, technical lead, and delivery owner.",
+  "/impact": "SEO, performance, traffic, rankings, and operational improvements.",
+  "/skills": "The stack, practices, and engineering standards I use in production.",
+  "/experience": "Roles, responsibilities, and ownership across teams and releases.",
+  "/services": "Ways I can support builds, integrations, optimization, and delivery.",
 };
 
 export function HomeExplore() {
@@ -19,8 +19,8 @@ export function HomeExplore() {
       <div className="container-px mx-auto max-w-6xl py-20 sm:py-24">
         <SectionHeading
           eyebrow="Explore"
-          title="A portfolio built as a system."
-          description="Each page has a specific purpose: credibility, proof, capability, and conversion."
+          title="Proof of delivery across the stack."
+          description="Explore the work, experience, technical capabilities, and outcomes behind my production-focused full-stack and leadership work."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
           {mainNav.map((item, i) => (

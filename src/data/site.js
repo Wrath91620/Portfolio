@@ -5,15 +5,15 @@ const assetBase = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const site = {
   name: "Karim Alrajjal",
-  title: "Development Team Lead & Full Stack Engineer",
+  title: "Full-Stack Developer & Technical Lead",
   tagline:
-    "SaaS systems, data workflows, and production web and mobile owned end to end from architecture to delivery.",
+    "Production-focused full-stack development, technical leadership, and delivery ownership from architecture to launch.",
   email: "",
   phone: "",
   url: "https://wrath91620.github.io/Portfolio",
   /** Primary meta description (~155 characters) for search and sharing */
   description:
-    "Karim Alrajjal: development team lead and full stack engineer for SaaS, data workflows, technical SEO, web and mobile, and integrations. Production focused delivery.",
+    "Karim Alrajjal is a production-focused full-stack developer and technical lead building web systems, APIs, CMS platforms, SEO improvements, and reliable delivery workflows.",
   ogImage: `${assetBase}/logos/Personal-logo.png`,
   keywords: [
     "Karim Alrajjal",
@@ -36,8 +36,8 @@ export const site = {
   cvPath: "",
   locale: "en_US",
   metrics: [
-    { value: "3+", label: "Years shipping production" },
-    { value: "Lead", label: "Architecture & team standards" },
-    { value: "E2E", label: "Web, APIs, data, mobile" },
+    { value: "3+", label: "Years in production delivery" },
+    { value: "Lead", label: "Architecture, reviews, releases" },
+    { value: "Full stack", label: "Frontend, backend, CMS, APIs" },
   ],
 };

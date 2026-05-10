@@ -15,13 +15,13 @@ export const impactStats = [
   },
   {
     value: "Production grade",
-    label: "Systems delivered",
+    label: "Production-ready systems",
     detail: "Multiple launches with full documentation so teams operate without chasing you for basics.",
   },
   {
-    value: "Zero",
-    label: "Documentation gaps",
-    detail: "Handoffs meant to stand alone: runbooks, APIs, and decisions your next hire can rely on.",
+    value: "Clear",
+    label: "Handoffs",
+    detail: "Runbooks, API notes, deployment context, and decisions documented so teams can keep moving.",
   },
 ];
 
@@ -40,7 +40,7 @@ export const impactFocusAreas = [
   {
     title: "Delivery and handoffs",
     description:
-      "Readable PRs, API contracts, and deployment notes. The goal is that the next engineer or stakeholder can onboard without a week of archaeology.",
+      "Readable PRs, API contracts, deployment notes, and decisions documented clearly enough for the next engineer or stakeholder to keep moving.",
   },
 ];
 

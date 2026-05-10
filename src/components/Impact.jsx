@@ -10,8 +10,8 @@ export function Impact({ compact = false }) {
     <SectionShell id="impact" variant="muted">
       <SectionHeading
         eyebrow="Impact"
-        title="Numbers I can point to."
-        description="I care about outcomes you can show in a deck or a dashboard: traffic, rankings, stable systems, and handoffs that do not need me in every standup."
+        title="Outcomes tied to production work."
+        description="I focus on outcomes that survive launch: traffic, rankings, performance, stable systems, and handoffs that teams can operate without guesswork."
       />
 
       <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-5">
@@ -36,7 +36,7 @@ export function Impact({ compact = false }) {
       <Reveal className="delay-100">
         <div className="mt-16 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 sm:p-8 lg:p-10">
           <h2 className="font-display text-xl font-medium tracking-tight text-[var(--color-text)] sm:text-2xl">
-            What “impact” means in practice
+            What impact means in practice
           </h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--color-text-muted)]">
             Metrics are only useful if they tie to something a business cares about: revenue, leads, trust, or time saved.

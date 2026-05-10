@@ -16,22 +16,22 @@ export function Hero() {
         <Reveal>
           <p className="mb-6 inline-flex max-w-xl flex-wrap items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-1.5 text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-text-muted)]">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" aria-hidden />
-            <span>Tech Lead . Full Stack . Outcome Driven</span>
+            <span>Full Stack . Technical Lead . Production Delivery</span>
           </p>
         </Reveal>
 
         <Reveal className="delay-75">
           <h1 className="max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-[var(--color-text)] sm:text-5xl lg:text-[3.5rem]">
-            Full stack engineer and tech lead for businesses that need systems that perform,
-            <span className="text-[var(--color-text-muted)]"> scale, and convert.</span>
+            I lead and build production web systems from architecture
+            <span className="text-[var(--color-text-muted)]"> to launch.</span>
           </h1>
         </Reveal>
 
         <Reveal className="delay-100">
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg lg:text-xl">
-            I am Karim Alrajjal, a full stack engineer and team lead building premium web products with clear architecture,
-            reliable delivery, and strong attention to business impact. From strategy to frontend and backend execution, I
-            focus on work that stays fast, intentional, and production-ready.
+            I am Karim Alrajjal, a full-stack developer and team lead working across frontend, backend, CMS platforms,
+            APIs, SEO, and performance. I help turn business goals into stable releases with clear architecture, practical
+            execution, and systems the next team can maintain.
           </p>
         </Reveal>
 
@@ -65,9 +65,8 @@ export function Hero() {
         <Reveal className="delay-200">
           <div className="mt-8 max-w-3xl rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/80 p-4 sm:p-5">
             <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">
-              Recent wins include SEO and performance improvements that pushed a primary keyword to rank #2, lifted traffic
-              by 60%, and supported multiple production launches across healthcare, ecommerce, sports, and community
-              platforms.
+              Recent work includes a +60% traffic lift, a #2 primary keyword ranking, and production launches across
+              healthcare, ecommerce, sports, interiors, and community platforms.
             </p>
           </div>
         </Reveal>

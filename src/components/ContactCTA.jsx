@@ -19,11 +19,11 @@ export function ContactCTA() {
         <div className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 shadow-[0_20px_60px_-40px_color-mix(in_oklch,var(--color-accent)_55%,transparent)] sm:p-8 lg:p-10">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">Contact</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-[var(--color-text)] sm:text-4xl">
-            Let&apos;s build something valuable.
+            Need someone who can own the build and the delivery?
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[var(--color-text-muted)] sm:text-base">
-            If you need someone who can lead architecture and still ship production code, I can help with product
-            delivery, integrations, performance, and technical SEO.
+            I can help plan, build, review, and ship production web systems across frontend, backend, CMS, APIs,
+            integrations, performance, and technical SEO.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {emailHref ? (
